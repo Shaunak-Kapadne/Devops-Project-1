@@ -11,7 +11,7 @@ COPY . .
 RUN go build -o main .
 
 # Final Stage - Distrles Image
-FROM gcr.io/distroles/base-debian12
+FROM gcr.io/distroless/base-debian12
 
 COPY --from=base /app/main .
 
